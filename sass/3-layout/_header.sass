@@ -1,0 +1,103 @@
+.article
+    width: 70%
+    // margin: 100px auto
+    color: white
+    position: relative
+    z-index: 50
+    // display: flex
+    margin: 25vh auto
+    // text-align: center
+    // justify-content: center
+    // align-items: center
+
+.intro-article
+    text-align: center
+    // justify-content: center
+    // align-items: center
+    h2 
+        font-weight: 500
+    
+    p 
+        font-size: 24px
+        font-weight: 300
+
+    // h2, p
+    //     justify-content: center
+
+    a 
+        text-decoration: none
+        color: white
+
+.label
+    display: block
+    font-weight: 500
+    margin: 10px 0px
+    font-size: 14px
+    transition: all 0.2s ease
+
+    &:hover, &:active
+        transform: translateY(1px)
+
+a.label 
+    text-decoration: none
+
+@media only screen and (min-width: 1920px)
+    .article
+        margin-top: 280px
+        h2 
+            font-weight: 500
+        p
+            font-size: 28px
+
+@media only screen and (min-width: 1367px) and (max-width: 1919px)
+    .article
+        margin-top: 110px
+        h2 
+            font-weight: 500
+        p
+            font-size: 24px
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+    .article
+        width: 90%
+        margin-top: 200px
+        h2 
+            font-size: 32px
+            font-weight: 500
+        p
+            font-size: 18px
+
+@media only screen and (min-width: 768px) and (orientation: portrait)
+    .article
+        width: 90%
+        margin-top: 250px
+
+@media only screen and (min-width: 481px) and (max-width: 767px)
+    .article
+        width: 90%
+        h2 
+            font-size: 32px
+            font-weight: 500
+        p
+            font-size: 16px
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+    .article
+        width: 90%
+        margin: 160px auto 20px auto
+        h2 
+            font-size: 24px
+            font-weight: 500
+        p
+            font-size: 16px
+
+    // .scroll-downs
+    //     display: block
+    //     position: absolute
+    //     right: 50%
+    //     bottom: 5px
+    //     width: 18px
+    //     height: 18px
+    //     z-index: 1
+    //     transition: all 0.2s ease

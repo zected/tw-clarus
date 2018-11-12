@@ -1,0 +1,128 @@
+#about
+    // height: 700px
+    text-align: center
+    // background: $blue
+    // color: white
+    background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(255,255,255,0) 100%)
+    overflow: hidden
+
+    img 
+        border-radius: 4px
+        box-shadow: 0px 10px 40px -5px rgba(0,64,128, 0.2) 
+
+.main-about
+    margin-top: 40px
+
+.content-about
+    display: flex
+    align-items: center
+    height: 100%
+
+.about-l
+    text-align: left
+    p  
+        font-size: 16px
+        line-height: 1.5
+
+.about-r
+    img 
+        max-width: 500px
+        height: auto
+
+.about-l, .about-r
+    display: block
+    padding: 20px
+
+.vision
+    p 
+        font-size: 18px
+        margin-bottom: 40px
+
+.vision-btn
+    margin: 2rem auto
+
+@media only screen and (min-width: 1920px)
+    #about 
+        height: 780px
+    .about-r
+        margin: auto
+        width: 100%
+        img 
+            max-width: 600px
+    // .about-l
+    //     p
+    //         font-size: 18px
+    //         line-height: 1.6
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+    #about 
+        height: 950px !important
+    .content-about
+        display: block
+        margin: 0
+    .about-r
+        text-align: center
+    .about-r, .about-l
+        padding: 10px
+
+@media only screen and (min-width: 768px) and (orientation: portrait)
+    #about
+        height: 825px
+    .main-about
+        text-align: center
+    .content-about
+        display: block
+        margin: 0
+    .about-r, .about-l
+        padding: 0
+    .about-r
+        margin: auto
+        width: 100%
+        img 
+            max-width: 450px
+
+@media only screen and (min-width: 320px) and (max-width: 767px)
+    #about
+        height: 950px
+    .main-about
+        text-align: center
+    .content-about
+        display: block
+        margin: 0
+    .about-r, .about-l
+        padding: 0
+    .about-r
+        margin: auto
+        width: 100%
+        img 
+            max-width: 270px
+
+    
+    
+// #introabout
+//     background: $grey
+//     text-decoration: none
+// .intro-about
+//     margin: auto
+//     padding: 20px
+//     text-align: center
+
+//     h3 
+//         font-weight: 300
+//         line-height: 1.6
+//         letter-spacing: 1px
+//         font-style: italic
+
+// #mainabout 
+//     text-align: center
+
+//     p.main-about
+//             margin-top: 50px
+//             width: 50%
+//             font-size: 18px
+//             line-height: 1.6
+//             text-align: left
+
+//     p.vision-about
+//         font-size: 20px
+//         margin-bottom: 40px

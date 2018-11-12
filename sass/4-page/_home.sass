@@ -1,0 +1,73 @@
+#header 
+    color: white
+    text-align: center
+    height: 90vh
+    position: relative
+    overflow: hidden
+    // max-height: 800px
+    // max-height: 800px
+    // background: $black
+
+.bg-slide
+    // background-image: url('/asset/img/bg-slider2.jpg')
+    // background-position: center
+    // background-repeat: no-repeat
+    // background-size: cover
+    width: 100%
+    position: absolute 
+    height: 90vh
+    z-index: -1
+ 
+
+    &::after
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        // background: rgba(0,35,255,0.7)
+        background: $blue
+        mix-blend-mode: hue
+        mix-blend-mode: color
+        mix-blend-mode: hard-light
+        mix-blend-mode: multiply
+        // opacity: 0.8
+        // background: linear-gradient(180deg, rgba(0,12,17,0.99) 10%, rgba(0,0,0,0.5) 100%)
+        // background-image: linear-gradient(0deg, rgba(255,226,0,1) 0%, rgba(58,115,179,1) 67%, rgba(0,40,170,1) 100%)
+        // background-color: #ffe200
+        overflow: hidden
+        z-index: 1
+
+.scroll-downs
+    position: absolute
+    left: 50%
+    bottom: 5vh
+    transition: all 0.2s ease
+    z-index: 5
+
+    img  
+        width: 18px
+        height: 18px
+
+    &:hover, &:active, &:focus
+        transform: translateY(1px)
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+    #header
+        height: 100vh
+    .bg-slide
+        height: 100vh
+
+
+@media only screen and (min-width: 481px) and (max-width: 767px)
+    #header
+        height: 580px !important
+    .bg-slide
+        height: 580px !important
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+    #header
+        height: 620px !important
+    .bg-slide
+        height: 620px !important

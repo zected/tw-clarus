@@ -1,0 +1,101 @@
+#navbar
+    background: $light
+    
+.main-nav
+    display: flex
+    margin: 0
+    padding: 0
+    z-index: 100
+
+    li 
+        list-style: none
+        display: inline-block
+    li.logo
+        margin-right: auto
+        img 
+            height: 52px
+
+    a
+        font-weight: 500
+        display: block
+        padding: 10px 20px
+        text-decoration: none
+        position: relative
+    
+    a:hover, a:active
+        color: $blue
+        transition: all 0.3s ease   
+        // transform: translateY(1px)
+
+
+
+    .responsive-nav
+        padding-top: 14px
+        a 
+            margin: 10px
+
+    .toggle-button
+        display: none
+//     a 
+//         padding-right: 0
+//         padding-left: 0
+
+.link-active
+    color: $blue !important
+
+@media screen and (max-width: 768px)
+    .main-nav
+        .toggle-button 
+            display: block
+            padding-top: 10px 
+            z-index: 100
+
+        .responsive-nav
+            display: none
+
+    .responsive-nav.showNav
+        display: block
+        width: 100%
+        background: $grey
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 100
+    .responsive-nav.showNav 
+        li
+            display: block
+    .responsive-nav.showNav 
+        a
+            color: white !important
+            padding: 34px
+            display: block
+            text-align: center
+
+@media screen and (max-width: 480px)
+    .main-nav
+        .toggle-button 
+            display: block
+            padding-top: 10px 
+            z-index: 100
+
+        .responsive-nav
+            display: none
+
+    .responsive-nav.showNav
+        display: block
+        width: 100%
+        // height: 450px
+        background: $grey
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 100
+    .responsive-nav.showNav 
+        li
+            display: block
+    .responsive-nav.showNav 
+        a
+            color: white !important
+            padding: 30px
+            display: block
+            text-align: center

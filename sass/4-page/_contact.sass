@@ -1,0 +1,91 @@
+#contact-head 
+    background: rgba(44,62,80, 1)
+    position: relative
+    box-shadow: 0px 10px 10px rgba(44,62,80, 1) 
+    z-index: 6
+    // background: linear-gradient(180deg, rgba(44,62,80,1) 0%, rgba(44,62,80,1) 90%, rgba(44,62,80,0.9) 100%)
+
+    .contact-intro
+        margin-left: 10px
+        color: white
+        width: 60%
+        margin-bottom: 1em
+        h3 
+            margin-bottom: 0
+        p 
+            margin-top: 0
+            font-size: 18px
+
+#contact-map
+    height: 450px
+    display: block
+    // background: $grey
+    position: relative
+    
+    // &::after
+    //     content: ''
+    //     position: absolute
+    //     top: 0
+    //     left: 0
+    //     right: 0
+    //     height: 25px
+    //     background: rgb(44,62,80)
+    //     background: linear-gradient(180deg, rgba(44,62,80,0.9) 0%, rgba(44,62,80,0.7) 50%, rgba(44,62,80,0) 100%)
+    //     // filter: blur(1px)
+
+    .map-canvas
+        background: $grey
+        // padding-top: 10px
+
+
+#contact-detail
+    background: $light
+    color: $grey
+    // height: 440px
+    // display: flex
+    // justify-content: center
+    // align-items: center
+
+    h3
+        color: $yellow
+        margin-top: 40px
+        text-align: center
+        font-weight: 300
+
+
+.detail
+    display: flex
+    margin-bottom: 40px
+
+.detail-l, detail-r
+    display: block
+   
+.detail-l
+    margin-right: auto
+    width: 40%
+    p
+        line-height: 1.8
+
+@media only screen and (max-width: 746px)
+    .contact-intro
+        text-align: center
+        justify-content: center
+        width: 100% !important
+        margin: auto
+
+        h3 
+            font-size: 24px
+        p 
+            font-size: 14px
+
+@media only screen and (max-width: 590px)
+    #contact-detail
+        height: 650px
+
+    .detail-l
+        width: 100%
+
+    .detail
+        margin-top: 4em
+        display: block
+

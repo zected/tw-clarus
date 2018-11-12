@@ -1,0 +1,123 @@
+#main
+    // height: 980px
+    text-align: center
+
+    a
+        color: $black
+
+
+    h3 
+        // color: white
+        margin-top: 40px
+        margin-bottom: 0px
+
+    p 
+        font-size: 24px
+        margin: 16px
+
+
+// .list-servis
+//     margin-top: 40px
+//     display: flex
+//     justify-content: center
+//     text-align: left !important
+
+//     a
+//         color: white
+//         text-decoration: none
+//         pointer-events: none
+//         font-size: 16px
+
+//     ul 
+//         padding: 0
+
+//     li
+//         line-height: 2
+//         padding-left: 10px
+//         list-style-image: url('/asset/icon/icon-list.png')
+
+
+// .list-r, .list-l
+//     display: block
+//     margin: 2em
+
+.fitur
+    margin: 80px auto !important
+    text-align: center
+    color: $black
+    p
+        font-size: 14px !important 
+    img 
+        height: 64px
+
+    
+.card
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    grid-gap: 20px
+    transition: transform .2s
+    p
+        font-size: 14px
+
+.fitur-card
+    // background: $yellow
+    padding: 30px
+    border-radius: 8px
+    box-shadow: 0px 2px 35px -4px rgba(0,64,128, 0.2) 
+
+    
+.btn-partner
+    margin: 40px
+
+
+    // .underlineSmall
+    //     background-color: $blue !important
+
+// @media only screen and (min-width: 481px) and (max-width: 767px)
+//     #main
+//         height: 1580px
+
+// @media only screen and (min-width: 370px) and (max-width: 480px)
+//     #main
+//         height: 2000px
+
+// @media only screen and (min-width: 320px) and (max-width: 369px)
+//     #main
+//         height: 2200px
+
+@media only screen and (min-width: 1920px)
+    .fitur
+        width: 80%
+        margin: 80px auto
+
+    .btn-partner
+        margin: 40px auto 80px auto
+
+@media only screen and (min-width: 1024px) and (orientation: landscape)
+    .fitur 
+        width: 80%
+        margin: 40px auto
+    .card
+        grid-template-columns: repeat(2, auto)
+        -webkit-grid-template-column: repeat(2, auto)
+        grid-gap: 20px
+
+@media only screen and (min-width: 320px) and (max-width: 767px)
+    .fitur 
+        width: 90%
+        margin: 40px auto
+    .card
+        grid-template-columns: repeat(1, auto)
+        grid-gap: 16px
+
+// @media only screen and (min-width: 320px) and (max-width: 736px)
+//     .list-servis
+//         display: grid
+//         grid-template-columns: repeat(1, auto)
+//         font-size: 20px
+//         margin-left: 40px
+
+//         ul 
+//             margin-bottom: 0
+//     .list-r, .list-l
+//         margin: 0

@@ -6,7 +6,12 @@ var purgecss = require('gulp-purgecss');
 var cleanCss = require('gulp-clean-css');
 
 
-gulp.task('default', function () {
+
+gulp.task('watch', function(){
+    gulp.watch('src/main.css', ['tailwind']);
+})
+
+gulp.task('tailwind', function () {
     return gulp.src('src/main.css')
     // ...
     .pipe(postcss([
@@ -19,30 +24,41 @@ gulp.task('default', function () {
         ]}),
       // ...
     ]))
-    .pipe(purgecss({
-      content: ["*.html"],
-      extractors: [
-          {
-              extractor: class TailwindExtractor {
-                  static extract(content) {
-                      return content.match(/[A-z0-9-:\/]+/g) || [];
-                  }
-              },
-              extensions: ['css', 'html']
-          }
-      ]
-    }))
+    // .pipe(purgecss({
+    //   content: ["*.html"],
+    //   extractors: [
+    //       {
+    //           extractor: class TailwindExtractor {
+    //               static extract(content) {
+    //                   return content.match(/[A-z0-9-:\/]+/g) || [];
+    //               }
+    //           },
+    //           extensions: ['css', 'html']
+    //       }
+    //   ]
+    // }))
     // ...
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('mini', function() {
-    return gulp.src('build/*css')
-        .pipe(cleanCss({specialComments: 0}))
+gulp.task('css', function() {
+    return gulp.src('build/*.css')
+    // .pipe(purgecss({
+    //     content: ["*.html"],
+    //     extractors: [
+    //         {
+    //             extractor: class TailwindExtractor {
+    //                 static extract(content) {
+    //                     return content.match(/[A-z0-9-:\/]+/g) || [];
+    //                 }
+    //             },
+    //             extensions: ['css', 'html']
+    //         }
+    //     ]
+    // }))
+    .pipe(cleanCss({specialComments: 0}))
         .pipe(gulp.dest('dist/'));
+  
 });
 
-gulp.task('watch', function(){
-    gulp.watch('src/main.css', ['default']);
-    gulp.watch('dist/main.css', ['mini']);
-})
+gulp.task('default', ['watch', 'css']);
